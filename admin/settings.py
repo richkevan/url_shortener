@@ -2,7 +2,7 @@ import environ
 import dj_database_url
 
 env = environ.Env()
-
+environ.Env.read_env()
 """
 Django settings for admin project.
 
@@ -21,7 +21,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 # Take environment variables from .env
-environ.Env.read_env()
+
 
 
 # Quick-start development settings - unsuitable for production
@@ -33,7 +33,9 @@ SECRET_KEY = env('DJANGO_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env.bool('DEBUG', default=False)
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    'https://django-url-shortener-lk37.onrender.com/'
+]
 
 
 # Application definition
