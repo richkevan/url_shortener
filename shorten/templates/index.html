@@ -1,0 +1,20 @@
+
+<html>
+ <body>
+  <head>
+   <title>URL_Shortener</title>
+  </head>
+  <h1>URL_Shortener</h1>
+  <div>
+    {% for url in shortLinks %}
+      <p><a href={{url.short_url}}>{{ url.short_url }}</a> - {{ url.long_url }} visits: {{url.visits}}</p>
+    {% endfor %}
+
+    <form action='/' method='post'>
+      {% csrf_token %}
+      <input type="url" name="long_url" placeholder="Enter URL to shorten">
+      <button type="submit">Shorten</button>
+    </form>
+  </div>
+ </body>
+</html>
