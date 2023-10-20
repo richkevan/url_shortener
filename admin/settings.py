@@ -34,7 +34,9 @@ SECRET_KEY = env('DJANGO_KEY')
 DEBUG = env.bool('DEBUG', default=False)
 
 ALLOWED_HOSTS = [
-    'https://django-url-shortener-lk37.onrender.com/'
+    'https://django-url-shortener-lk37.onrender.com/',
+    'django-url-shortener-lk37.onrender.com',
+    'localhost',
 ]
 
 
